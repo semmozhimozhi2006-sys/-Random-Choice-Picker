@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Random Choice Picker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🎲 Random Choice Picker</h1>
+      <p class="sub">Type options separated by commas or new lines, then pick!</p>
+    </header>
+
+    <label for="choicesInput" class="label">Your options</label>
+    <textarea id="choicesInput" rows="5" placeholder="pizza, burger, pasta
+(or one per line)"></textarea>
+
+    <div class="actions">
+      <button id="pickBtn" class="primary">Pick Random</button>
+      <button id="clearBtn" class="ghost">Clear</button>
+      <button id="copyBtn" class="ghost">Copy Result</button>
+    </div>
+
+    <div id="tags" class="tags" aria-live="polite"></div>
+
+    <section class="result-card" aria-live="polite" aria-atomic="true">
+      <span class="result-label">Result:</span>
+      <span id="resultText" class="result-text">—</span>
+    </section>
+
+    <footer class="tips">
+      <ul>
+        <li>Press <kbd>Enter</kbd> to pick (when the textarea is focused).</li>
+        <li>Empty items are ignored automatically.</li>
+      </ul>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
